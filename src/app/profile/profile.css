@@ -1,0 +1,22 @@
+.hero-section{
+    padding-top: 64px;
+    padding-bottom: 120px;
+}
+
+.left-column img{
+    width: 588px;
+}
+
+h2 {
+    margin-bottom: 64px;
+}
+
+.profile-info-wrapper{
+    margin-bottom: 32px;
+}
+
+.profile-buttons-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+}

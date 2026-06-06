@@ -1,0 +1,14 @@
+<section class="hero-section">
+    <div class="main-content-container center-content">
+        <h2> Welcome back in the world of toys </h2>
+
+        <form id="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="input-fields-wrapper">  
+                <input type="email" placeholder="Email address" formControlName="email" class="input-field">
+                <input type="password" placeholder="Password" formControlName="password" class="input-field">
+            </div>
+            <button type="submit" id="login-button" class="primary-button"> Login now </button>
+        </form>
+        <a routerLink="/signup" class="secondary-button-yellow top-margin-16"> Sign up if you don’t have an accout </a> 
+    </div>
+</section>

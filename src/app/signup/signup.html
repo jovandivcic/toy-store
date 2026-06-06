@@ -1,0 +1,22 @@
+<section class="hero-section">
+    <div class="main-content-container center-content">
+        <h2> Sign up and explore world of toys </h2>
+
+        <form id="signup-form">
+            <div class="input-fields-wrapper">  
+                <input type="text" placeholder="Full name" id="signup-full-name" class="input-field">
+                <input type="email" placeholder="Email address" id="signup-email-address" class="input-field">
+                <input type="tel" placeholder="Phone nuber" id="signup-phone-number" class="input-field">
+                <input type="text" placeholder="Street" id="signup-street" class="input-field">
+                <select aria-placeholder="Favorite toys" id="signup-favorite-toys" class="input-field">
+                    @for (favoriteToy of favoriteToys(); track $index) {
+                        <option [value]="favoriteToy"> {{favoriteToy}} </option>
+                    }
+                </select>
+                <input type="password" placeholder="Password" id="signup-password" class="input-field">
+            </div>
+            <button type="submit" id="signup-button" class="primary-button"> Signup now </button>
+        </form>
+        <a routerLink="/login" class="secondary-button-yellow top-margin-16"> Log in if you already have an acconut </a> 
+    </div>
+</section>

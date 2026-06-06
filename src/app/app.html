@@ -1,2 +1,32 @@
-<h1> PKI </h1>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+</style>
+
+
+
+<!-- Navbar -->
+<nav>
+    <div class="navbar-container">
+        @if (hasAuth()) {
+            <div class="navbar-left-column"> 
+                <a routerLink=""> FigurineShop </a>
+            </div>
+
+            <div class="navbar-right-column">
+                <a routerLink="/profile"> <i class="fa-solid fa-circle-user fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
+                <a> <i class="fa-solid fa-bag-shopping fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
+                <a (click)="logoutNow()"> <i class="fa-solid fa-arrow-right-from-bracket fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
+            </div>
+        }
+        @else{
+            <div class="navbar-logo-center"> 
+                <a routerLink=""> FigurineShop </a>
+            </div>
+        }
+
+    </div>
+</nav>
+
 <router-outlet />

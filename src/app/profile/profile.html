@@ -1,0 +1,29 @@
+<section class="hero-section">
+    <div class="main-content-container"> 
+        <div class="columns-wrapper">
+            <div class="left-column"> 
+                <img src="/img/Profile-image.png">
+            </div>
+
+            <div class="right-column">
+                <h2> {{currentUser()?.fullName}} </h2>
+                <div class="profile-info-wrapper">
+                    <p> <b>Email address:</b> {{currentUser()?.email}} </p>
+                    <div class="line-separator"> </div>
+                    <p> <b>Phone number:</b> {{currentUser()?.phone}} </p>
+                    <div class="line-separator"> </div>
+                    <p> <b>Street:</b> {{currentUser()?.street}} </p>
+                    <div class="line-separator"> </div>
+                    <p> <b>Favorite toys:</b> {{currentUser()?.favoriteToys}} </p>
+                    <div class="line-separator"> </div>
+                </div>
+
+                <div class="profile-buttons-wrapper">
+                    <button class="primary-button is-large-button"> Change profile information </button>
+                    <button class="tertiary-button-yellow"> <i class="fa-solid fa-arrow-right-from-bracket fa-lg" style="color: #ffdd2f;"></i> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
