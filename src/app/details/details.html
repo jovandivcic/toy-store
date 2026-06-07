@@ -1,0 +1,28 @@
+@if (toy()) {
+    <section class="hero-section">
+    <div class="main-content-container"> 
+        <div class="columns-wrapper">
+            <div class="left-column"> 
+                <img src="{{toy()?.profileImage}}">
+            </div>
+
+            <div class="right-column">
+                <h2> {{toy()?.name}} </h2>
+                <p class="toy-profile-description"> {{toy()?.description}} </p>
+                <p class="toy-profile-price"> ${{toy()?.price}} </p>
+                <button id="login-button" class="primary-button is-full-width margin-bottom-64"> Add this item to the cart </button>
+                <div class="profile-info-wrapper">
+                    <p> <b>Type:</b> {{toy()?.type}} </p>
+                    <div class="line-separator"> </div>
+                    <p> <b>Age:</b> {{toy()?.age}} </p>
+                    <div class="line-separator"> </div>
+                    <p> <b>Target audience:</b> {{toy()?.targetAudience}} </p>
+                    <div class="line-separator"> </div>
+                    <p> <b>Date of manufacture:</b> {{toy()?.dateOfManufacture}} </p>
+                    <div class="line-separator"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}

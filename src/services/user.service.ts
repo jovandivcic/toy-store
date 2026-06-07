@@ -3,9 +3,8 @@ import { UserModel } from "../models/user.model"
 
 export class UserService {
 
-
-    static findUserByEmail(email: string){
-        if(!localStorage.getItem('users'))
+    static getUsers(): UserModel[] {
+       if(!localStorage.getItem('users'))
             localStorage.setItem('users', JSON.stringify([
                 {
                     fullName: "user userson",
@@ -17,7 +16,11 @@ export class UserService {
                 }
         ]))
 
-        const users: UserModel[] = JSON.parse(localStorage.getItem('users')!)
+        return JSON.parse(localStorage.getItem('users')!)
+    }
+
+    static findUserByEmail(email: string){
+        const users: UserModel[] = this.getUsers()
         return users.find(u => u.email === email);
     }
 
@@ -38,6 +41,13 @@ export class UserService {
         localStorage.setItem('active', user.email)
         return true
     }
+
+
+    static signup(payload: UserModel){
+        const users: UserModel[] = this.getUsers()
+        users.push(payload)
+        localStorage.setItem('users', JSON.stringify(users))
+    } 
 
 
     static getActiveUser(){

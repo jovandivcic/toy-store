@@ -98,6 +98,16 @@ form .input-fields-wrapper {
     font-weight: 600;
     border: 0px;
     text-align: center;
+    text-decoration: none;
+}
+
+.is-full-width {
+    width: 100%;
+}
+
+.is-red {
+    background-color: #AA0002;
+    color: white;
 }
 
 .is-large-button {
@@ -110,8 +120,18 @@ form .input-fields-wrapper {
     text-decoration: none;
 }
 
+.secondary-button-red {
+    font-weight: 600;
+    color: #AA0002;
+    text-decoration: none;
+}
+
 .top-margin-16 {
     margin-top: 16px;
+}
+
+.margin-bottom-64 {
+    margin-bottom: 64px;
 }
 
 
@@ -151,3 +171,4 @@ form .input-fields-wrapper {
     background-color: rgba(255, 221, 47, 0.2);
     border: 0px;
 }
+

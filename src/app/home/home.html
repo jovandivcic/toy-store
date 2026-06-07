@@ -1,1 +1,32 @@
-<p>home works!</p>
+<section class="hero-section">
+    <div class="main-content-container center-content">
+        <div class="hero-centered-content-wrapper">
+            <h1> Figurine shop for children </h1>
+            <p class="hero-paragraph"> Find your child's favorite celebrity or cartoon character and make them happy.
+                This is a memory they will remember for a lifetime. </p>
+            <a href="#toys-section" class="primary-button"> Look at all the figures </a>
+            <img src="/img/hero-image.png" class="hero-image">
+        </div>
+    </div>
+</section>
+
+<section id="toys-section">
+    <div class="main-content-container">
+        <div class="filter-and-list-wrapper">
+            <div class="filter-column"></div>
+            <div class="list-column">
+                @for (toy of toys(); track toy.id) {
+                <div class="home-toy-card">
+                    <img src="{{toy.overviewImage}}">
+                    <div class="toy-card-text">
+                        <h3> {{toy.name}} </h3>
+                        <p> ${{toy.price}} </p>
+                        <button id="login-button" class="primary-button is-full-width is-red"> Add this item to the cart </button>
+                        <a [routerLink]="`/details/${toy.id}`" class="secondary-button-red top-margin-16"> Learn more </a>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

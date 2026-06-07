@@ -1,0 +1,177 @@
+[
+
+
+
+    {
+        "id": 1,
+        "name": "Hannah Montana cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/hannah-montana.jpg",
+        "profileImage": "/img/toys-img/profile-img/hannah-montana.jpg",
+        "cartImage": "/img/toys-img/cart-img/hannah-montana.jpg",
+        "description": "Hannah Montana ultra realistic cartoon figure.",
+        "type": "music hero",
+        "age": "0-4",
+        "targetAudience": "girls",
+        "dateOfManufacture": "2014",
+        "price": 10,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 2,
+        "name": "Pepa pig cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/pepa-pig.jpg",
+        "profileImage": "/img/toys-img/profile-img/pepa-pig.jpg",
+        "cartImage": "/img/toys-img/cart-img/pepa-pig.jpg",
+        "description": "Pepa pig ultra realistic cartoon figure.",
+        "type": "cartoon hero",
+        "age": "0-4",
+        "targetAudience": "girls and boys",
+        "dateOfManufacture": "2015",
+        "price": 20,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 3,
+        "name": "Cristiano Ronaldo cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/cristiano-ronaldo.jpg",
+        "profileImage": "/img/toys-img/profile-img/cristiano-ronaldo.jpg",
+        "cartImage": "/img/toys-img/cart-img/cristiano-ronaldo.jpg",
+        "description": "Cristiano Ronaldo ultra realistic cartoon figure.",
+        "type": "athlete hero",
+        "age": "4-8",
+        "targetAudience": "boys",
+        "dateOfManufacture": "2025",
+        "price": 40,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 4,
+        "name": "Rafaelo TMNT cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/rafaelo-tmnt.jpg",
+        "profileImage": "/img/toys-img/profile-img/rafaelo-tmnt.jpg",
+        "cartImage": "/img/toys-img/cart-img/rafaelo-tmnt.jpg",
+        "description": "Rafaelo TMNT ultra realistic cartoon figure.",
+        "type": "cartoon hero",
+        "age": "4-8",
+        "targetAudience": "boys",
+        "dateOfManufacture": "2009",
+        "price": 20,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+       "id": 5,
+        "name": "Desingerica cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/desingerica.jpg",
+        "profileImage": "/img/toys-img/profile-img/desingerica.jpg",
+        "cartImage": "/img/toys-img/cart-img/desingerica.jpg",
+        "description": "Desingerica ultra realistic cartoon figure.",
+        "type": "music hero",
+        "age": "4-8",
+        "targetAudience": "girls and boys",
+        "dateOfManufacture": "2026",
+        "price": 10,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 6,
+        "name": "Cody Miller Mc cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/cody-miller-mc.jpg",
+        "profileImage": "/img/toys-img/profile-img/cody-miller-mc.jpg",
+        "cartImage": "/img/toys-img/cart-img/cody-miller-mc.jpg",
+        "description": "Cody Miller McIntyre ultra realistic cartoon figure.",
+        "type": "athlete hero",
+        "age": "9+",
+        "targetAudience": "girls and boys",
+        "dateOfManufacture": "2024",
+        "price": 80,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 7,
+        "name": "Goku Super Saiyan cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/goku-super-saiyan.jpg",
+        "profileImage": "/img/toys-img/profile-img/goku-super-saiyan.jpg",
+        "cartImage": "/img/toys-img/cart-img/goku-super-saiyan.jpg",
+        "description": "Goku Super Saiyan ultra realistic cartoon figure.",
+        "type": "cartoon hero",
+        "age": "9+",
+        "targetAudience": "boys",
+        "dateOfManufacture": "2020",
+        "price": 80,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 8,
+        "name": "Ceca Ražnatović cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/ceca-raznatovic.jpg",
+        "profileImage": "/img/toys-img/profile-img/ceca-raznatovic.jpg",
+        "cartImage": "/img/toys-img/cart-img/ceca-raznatovic.jpg",
+        "description": "Ceca Ražnatović ultra realistic cartoon figure.",
+        "type": "music hero",
+        "age": "9+",
+        "targetAudience": "girls",
+        "dateOfManufacture": "2021",
+        "price": 50,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 9,
+        "name": "Alksandar Katai cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/aleksandar-katai.jpg",
+        "profileImage": "/img/toys-img/profile-img/aleksandar-katai.jpg",
+        "cartImage": "/img/toys-img/cart-img/aleksandar-katai.jpg",
+        "description": "Alksandar Katai ultra realistic cartoon figure.",
+        "type": "athlete hero",
+        "age": "9+",
+        "targetAudience": "boys",
+        "dateOfManufacture": "2022",
+        "price": 100,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    },
+
+    {
+        "id": 10,
+        "name": "Noddy cartoon figure",
+        "overviewImage": "/img/toys-img/overview-img/noddy.jpg",
+        "profileImage": "/img/toys-img/profile-img/noddy.jpg",
+        "cartImage": "/img/toys-img/cart-img/noddy.jpg",
+        "description": "Noddy ultra realistic cartoon figure.",
+        "type": "cartoon hero",
+        "age": "4-8",
+        "targetAudience": "girls and boys",
+        "dateOfManufacture": "2022",
+        "price": 10,
+        "reviews": [],
+        "orderStatus": "",
+        "ratings": []
+    }
+
+
+
+]

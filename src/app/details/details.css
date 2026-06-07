@@ -1,0 +1,30 @@
+.hero-section{
+    padding-top: 64px;
+    padding-bottom: 120px;
+}
+
+.left-column img{
+    width: 588px;
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+.toy-profile-description {
+    margin-bottom: 12px;
+}
+
+.toy-profile-price {
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    margin-bottom: 24px;
+}
+
+.profile-info-wrapper{
+    margin-bottom: 32px;
+}

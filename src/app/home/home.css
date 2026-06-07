@@ -1,0 +1,94 @@
+.hero-section {
+    padding-top: 64px;
+}
+
+h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 84px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    max-width: 792px;
+    text-align: center;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.hero-paragraph {
+    max-width: 588px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.hero-centered-content-wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    margin-top: 64px;
+}
+
+
+
+
+#toys-section {
+    padding: 120px 0px;
+    background-color: #FFEDC5;
+}
+
+.filter-and-list-wrapper {
+    display: flex;
+    gap: 24px;
+}
+
+.filter-column{
+    width: 384px;
+}
+
+.list-column {
+    width: 792px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+
+
+
+.home-toy-card {
+    max-width: 384px;
+    background-color: #F1DDB0;
+    border: 0.5px solid #998351;
+    display: flex;
+    flex-direction: column;
+}
+
+.toy-card-text {
+    padding: 32px;
+}
+
+.toy-card-text h3 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -4%;
+    color: #300000;
+    margin-bottom: 12px;
+}
+
+.toy-card-text p {
+    font-size: 24px;
+    line-height: 125%;
+    color: #535353;
+    margin-bottom: 32px;
+}
+
+.toy-card-text a {
+    display: block;
+    margin: 16px auto 0 auto;
+    text-align: center;
+}
