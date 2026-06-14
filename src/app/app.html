@@ -16,13 +16,17 @@
 
             <div class="navbar-right-column">
                 <a routerLink="/profile"> <i class="fa-solid fa-circle-user fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
-                <a> <i class="fa-solid fa-bag-shopping fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
+                <a routerLink="/cart"> <i class="fa-solid fa-bag-shopping fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
                 <a (click)="logoutNow()"> <i class="fa-solid fa-arrow-right-from-bracket fa-xl" style="color: rgb(255, 255, 255);"></i> </a>
             </div>
         }
         @else{
-            <div class="navbar-logo-center"> 
+            <div class="navbar-left-column"> 
                 <a routerLink=""> FigurineShop </a>
+            </div>
+
+            <div class="navbar-right-column">
+                <a routerLink="/login"> Login </a>
             </div>
         }
 

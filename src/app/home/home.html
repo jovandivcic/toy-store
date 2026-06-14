@@ -21,7 +21,7 @@
                     <div class="toy-card-text">
                         <h3> {{toy.name}} </h3>
                         <p> ${{toy.price}} </p>
-                        <button id="login-button" class="primary-button is-full-width is-red"> Add this item to the cart </button>
+                        <button (click)="addToCart(toy)" class="primary-button is-full-width is-red"> Add this item to the cart </button>
                         <a [routerLink]="`/details/${toy.id}`" class="secondary-button-red top-margin-16"> Learn more </a>
                     </div>
                 </div>

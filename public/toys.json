@@ -15,7 +15,6 @@
         "dateOfManufacture": "2014",
         "price": 10,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -32,7 +31,6 @@
         "dateOfManufacture": "2015",
         "price": 20,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -49,7 +47,6 @@
         "dateOfManufacture": "2025",
         "price": 40,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -66,7 +63,6 @@
         "dateOfManufacture": "2009",
         "price": 20,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -83,7 +79,6 @@
         "dateOfManufacture": "2026",
         "price": 10,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -100,7 +95,6 @@
         "dateOfManufacture": "2024",
         "price": 80,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -117,7 +111,6 @@
         "dateOfManufacture": "2020",
         "price": 80,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -134,7 +127,6 @@
         "dateOfManufacture": "2021",
         "price": 50,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -151,7 +143,6 @@
         "dateOfManufacture": "2022",
         "price": 100,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     },
 
@@ -168,7 +159,6 @@
         "dateOfManufacture": "2022",
         "price": 10,
         "reviews": [],
-        "orderStatus": "",
         "ratings": []
     }
 

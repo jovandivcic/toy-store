@@ -1,7 +1,8 @@
 import { Component, signal } from "@angular/core";
 import { ToyService } from "../../services/toy.service";
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { ToyModel } from "../../models/toy.model";
+import { CartService } from "../../services/cart.service";
 
 @Component({
   selector: "app-home",
@@ -12,8 +13,20 @@ import { ToyModel } from "../../models/toy.model";
 export class Home {
   protected toys = signal<ToyModel[]>([])
 
-  constructor() {
+  constructor(protected router: Router) {
     ToyService.getToys()
       .then(rsp => this.toys.set(rsp.data))
   }
+
+  addToCart(toy: ToyModel) {
+    try {
+        CartService.addToCart(toy);
+        alert("Toy added to cart");
+    } catch (error) {
+        alert("You must be logged in to reserve toys");
+        this.router.navigate(['/login']);
+    }
+}
+
+
 }

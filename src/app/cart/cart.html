@@ -1,0 +1,26 @@
+<section class="cart-section">
+    <div class="main-content-container">
+        <h1> Your cart </h1>
+
+        @if(cartItems().length === 0) {
+            <p> Your cart is the empty, but you can make it full. </p>
+        } @else {
+
+            <div class="filter-and-list-wrapper">
+                <div class="list-column">
+                    @for (cartItem of cartItems(); track cartItem.toy.id) {
+                        <div class="cart-item-card">
+                            <img src="{{cartItem.toy.cartImage}}">
+                            <div>
+                                <p class="cart-item-name"> {{cartItem.toy.name}} </p>
+                                <p>  <strong> Status: </strong> @if(cartItem.status === "reserved"){ reserved } @else { "delivered" } </p>
+                                <p> <strong> Price per item: </strong> ${{cartItem.toy.price}} </p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="filter-column"></div>
+            </div>
+        }
+    </div>
+</section>

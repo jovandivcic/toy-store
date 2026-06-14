@@ -1,0 +1,49 @@
+* {
+    color: #535353;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+.cart-section {
+    padding-top: 64px;
+    padding-bottom: 120px;
+    background-color: #FFEDC5;
+}
+
+h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 84px;
+    line-height: 100%;
+    letter-spacing: -4%;
+    max-width: 792px;
+    color: #AA0002;
+    margin-bottom: 48px;
+}
+
+
+
+
+/* I use this for cart items and cart price column 
+(class names are bad, because I wanted to use the same classes as on the homepage */
+.filter-and-list-wrapper {
+    display: flex;
+    gap: 24px;
+}
+
+.filter-column{
+    width: 384px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.list-column {
+    width: 792px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+     height: 100px;
+    background-color: rgb(0, 102, 102);
+}
