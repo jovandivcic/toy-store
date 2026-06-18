@@ -7,10 +7,19 @@
             </div>
 
             <div class="right-column">
+                @if(averageRating() > 0){
+                    <div class="rating-stars-wrapper">
+                        @for(star of getStars(averageRating()); track star){
+                            <i class="fa-solid fa-star fa-lg" style="color: #ffdc2e;"></i>
+                        }
+                    </div>
+                }
+
+
                 <h2> {{toy()?.name}} </h2>
                 <p class="toy-profile-description"> {{toy()?.description}} </p>
                 <p class="toy-profile-price"> ${{toy()?.price}} </p>
-                <button id="login-button" class="primary-button is-full-width margin-bottom-64"> Add this item to the cart </button>
+                <button (click)="addToCart(toy()!)" class="primary-button is-full-width margin-bottom-64"> Add this item to the cart </button>
                 <div class="profile-info-wrapper">
                     <p> <b>Type:</b> {{toy()?.type}} </p>
                     <div class="line-separator"> </div>
@@ -25,4 +34,29 @@
         </div>
     </div>
 </section>
+
+
+
+    @if(reviews().length > 0){
+        <section class="reviews-section">
+            <div class="main-content-container">
+                <h2 class="red-h2"> Reviews </h2>
+
+                <div class="reviews-wrapper">
+                    @for(review of reviews(); track review.id){
+                        <div class="review-card">
+                            <div class="review-stars-wrapper">
+                                @for(star of getStars(review.rating); track star){
+                                    <i class="fa-solid fa-star fa-sm" style="color: #aa0002;"></i>
+                                }
+                            </div>
+
+                            <p class="review-comment"> "{{review.comment}}" </p>
+                            <p class="review-name"> {{review.userFullName}} </p>
+                        </div>
+                    }
+            </div>
+            </div>
+        </section>
+    }
 }

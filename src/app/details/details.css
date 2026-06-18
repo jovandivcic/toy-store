@@ -28,3 +28,52 @@ h2 {
 .profile-info-wrapper{
     margin-bottom: 32px;
 }
+
+.rating-stars-wrapper {
+    margin-bottom: 8px;
+}
+
+
+
+
+.reviews-section{
+    background-color: #FFEDC5;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.red-h2 {
+    color: #AA0002;
+}
+
+.reviews-wrapper {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.review-card {
+    background-color: #F1DDB0;
+    border: 0.5px solid #998351;
+    padding: 32px;
+    width: 384px;
+    align-self: stretch;
+}
+
+.review-stars-wrapper {
+    margin-bottom: 8px;
+}
+
+.review-comment {
+    font-size: 28px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 900;
+    color: #300000;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+
+.review-name {
+    color: #535353;
+}

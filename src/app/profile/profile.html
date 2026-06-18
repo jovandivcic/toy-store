@@ -19,11 +19,36 @@
                 </div>
 
                 <div class="profile-buttons-wrapper">
-                    <button class="primary-button is-large-button"> Change profile information </button>
-                    <button class="tertiary-button-yellow"> <i class="fa-solid fa-arrow-right-from-bracket fa-lg" style="color: #ffdd2f;"></i> </button>
+                    <button (click)="openEditModal()" class="primary-button is-large-button"> Change profile information </button>
+                    <button (click)="logout()" class="tertiary-button-yellow"> <i class="fa-solid fa-arrow-right-from-bracket fa-lg" style="color: #ffdd2f;"></i> </button>
                 </div>
             </div>
         </div>
     </div>
+
+    @if(isEditModalOpen()){
+         <div class="background-overlay"></div>
+
+         <div class="profile-modal">
+            <div class="close-modal-button-wrapper">
+                <button (click)="closeEditModal()" class="close-modal-button"> <i class="fa-solid fa-x" style="color: #AA0002;"></i> </button>
+            </div>
+
+            <form [formGroup]="profileForm" (ngSubmit)="saveProfileChanges()" class="profile-modal-form">
+                <input type="text" placeholder="Full name" formControlName="fullName" class="profile-modal-input">
+                <input type="tel" placeholder="Phone number" formControlName="phone" class="profile-modal-input">
+                <input type="text" placeholder="Street" formControlName="street" class="profile-modal-input">
+
+                <select formControlName="favoriteToys" class="profile-modal-input">
+                    @for(favoriteToy of favoriteToys(); track favoriteToy) {
+                        <option [value]="favoriteToy"> {{ favoriteToy }} </option>
+                    }
+                </select>
+
+                <input type="password" placeholder="Password" formControlName="password" class="profile-modal-input">
+                <button type="submit" class="primary-button is-full-width is-red top-margin-12px"> Change profile information </button>
+            </form>
+         </div>
+    }
 </section>
 

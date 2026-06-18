@@ -13,9 +13,55 @@
 <section id="toys-section">
     <div class="main-content-container">
         <div class="filter-and-list-wrapper">
-            <div class="filter-column"></div>
+            <div class="filter-column">
+                <div class="filters-wrapper">
+
+
+                    <input type="text" placeholder="Name" class="filter-field" [value]="nameFilter()" (input)="updateNameFilter($event)">
+
+                    <select class="filter-field" [value]="typeFilter()" (change)="updateTypeFilter($event)">
+                        <option value="all">All types</option>
+                        <option value="athlete hero">Athlete hero</option>
+                        <option value="music hero">Music hero</option>
+                        <option value="cartoon hero">Cartoon hero</option>
+                    </select>
+
+                    <select class="filter-field" [value]="ageFilter()" (change)="updateAgeFilter($event)">
+                        <option value="all">All ages</option>
+                        <option value="0-4">0-4</option>
+                        <option value="4-8">4-8</option>
+                        <option value="9+">9+</option>
+                    </select>
+
+                    <select class="filter-field" [value]="targetAudienceFilter()" (change)="updateTargetAudienceFilter($event)">
+                        <option value="all">All target audiences</option>
+                        <option value="girls">Girls</option>
+                        <option value="boys">Boys</option>
+                        <option value="girls and boys">Girls and boys</option>
+                    </select>
+
+                    <select class="filter-field" [value]="dateOfManufactureFilter()" (change)="updateDateOfManufactureFilter($event)">
+                        <option value="all">All dates</option>
+                        <option value="2015">2015+</option>
+                        <option value="2020">2020+</option>
+                        <option value="2024">2024+</option>
+                    </select>
+
+                    <select class="filter-field" [value]="priceFilter()" (change)="updatePriceFilter($event)">
+                        <option value="all">All prices</option>
+                        <option value="80">&lt;$80</option>
+                        <option value="50">&lt;$50</option>
+                        <option value="20">&lt;$20</option>
+                    </select>
+
+
+                </div>
+            </div>
+
+
+
             <div class="list-column">
-                @for (toy of toys(); track toy.id) {
+                @for (toy of filteredToys(); track toy.id) {
                 <div class="home-toy-card">
                     <img src="{{toy.overviewImage}}">
                     <div class="toy-card-text">

@@ -3,24 +3,102 @@
         <h1> Your cart </h1>
 
         @if(cartItems().length === 0) {
-            <p> Your cart is the empty, but you can make it full. </p>
+            <p class="cart-empty-message"> Your cart is the empty, but you can make it full. </p>
         } @else {
 
             <div class="filter-and-list-wrapper">
                 <div class="list-column">
                     @for (cartItem of cartItems(); track cartItem.toy.id) {
                         <div class="cart-item-card">
-                            <img src="{{cartItem.toy.cartImage}}">
-                            <div>
-                                <p class="cart-item-name"> {{cartItem.toy.name}} </p>
-                                <p>  <strong> Status: </strong> @if(cartItem.status === "reserved"){ reserved } @else { "delivered" } </p>
-                                <p> <strong> Price per item: </strong> ${{cartItem.toy.price}} </p>
+                            <img src="{{cartItem.toy.cartImage}}" class="cart-item-image">
+                            <div  class="cart-item-right-column">
+                                <div class="cart-item-text-wrapper">
+                                    <div class="cart-item-info-wrapper">
+                                        <p class="cart-item-name"> {{cartItem.toy.name}} </p>
+                                        <p>  <strong> Status: </strong> @if(cartItem.status === "reserved"){ reserved } @else { delivered } </p>
+                                        <p> <strong> Price per item: </strong> ${{cartItem.toy.price}} </p>
+                                    </div>
+                                    
+                                    @if(cartItem.status === "reserved"){
+                                        <div class="cart-item-order-info-wrapper">
+                                            <div class="quantity-control">
+                                                <button (click)="decreaseQuantity(cartItem.toy.id)"> <i class="fa-solid fa-caret-down fa-xs" style="color: #998351;"></i> </button>
+                                                <span> {{cartItem.quantity}} </span>
+                                                <button (click)="increaseQuantity(cartItem.toy.id)"> <i class="fa-solid fa-caret-up fa-xs" style="color: #998351;"></i> </button>
+                                            </div>
+
+                                            <p> ${{cartItem.quantity * cartItem.toy.price}} </p>
+                                        </div>
+                                    }
+                                </div>
+
+                                <div class="cart-item-buttons-wrapper"> 
+                                    @if (cartItem.status === "reserved") {
+                                        <button (click)="buyItemNow(cartItem.toy.id)" class="primary-button is-full-width is-red"> Buy this item now </button>
+                                    } @else {
+                                        <button (click)="openRatingModal(cartItem)" class="primary-button is-full-width is-red"> Rate the product </button>
+                                    }
+                                    <button (click)="removeItem(cartItem.toy.id)" class="tertiary-button-red"> <i class="fa-solid fa-trash fa-lg" style="color: #aa0002;"></i> </button>
+                                </div>
                             </div>
                         </div>
                     }
                 </div>
-                <div class="filter-column"></div>
+
+
+
+                <div class="filter-column">
+                    <div class="cart-summary-info-wrapper">
+                        <div class="reserved-products-summary-wrapper">
+                            @for (reservedItem of reservedItems(); track reservedItem.toy.id) {
+                                <div class="reserved-product-summury">
+                                    <span class="summary-reserved-item-name"> {{reservedItem.toy.name}} </span>
+                                    <span class="summary-reserved-item-quantity"> x{{reservedItem.quantity}} </span>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="cart-summary-price-wrapper">
+                            <span> Summary: </span>
+                            <span> ${{totalReservedPrice()}} </span>
+                        </div>
+                    </div>
+
+                    <button (click)="buyAllReservedItems()" class="primary-button is-full-width is-yellow"> Buy all  reserved items </button>
+                </div>
             </div>
         }
     </div>
+
+
+
+    @if(selectedItem()) {
+        <div class="background-overlay"></div>
+
+        <div class="rating-modal">
+            <div class="close-modal-button-wrapper">
+                <button (click)="closeRatingModal()" class="close-modal-button"> <i class="fa-solid fa-x" style="color: #ffedc5;"></i> </button>
+            </div>
+
+            <p class="modal-heading"> Rate the toy 1-5 and leave a comment  </p>
+
+            <div class="modal-rating-wrapper">
+                <select [value]="ratingValue()" (change)="updateRatingValue($event)">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="modal-comment-wrapper">
+                <textarea class="modal-textarea" placeholder="Your comment..." [value]="ratingComment()" (input)="updateRatingComment($event)"></textarea>
+            </div>
+            
+
+            <button (click)="confirmRating()" class="primary-button is-full-width is-yellow"> Confirm your rating </button>
+        </div>
+    }
+
 </section>

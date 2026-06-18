@@ -55,10 +55,52 @@ export class UserService {
 
         if(!active)
             throw new Error("USER_NOT_FOUND")
-        return this.findUserByEmail(active)
+
+        const activeUser = this.findUserByEmail(active)
+
+        if (!activeUser)
+            throw new Error("USER_NOT_FOUND")
+
+        return activeUser
     }
 
     static logout(){
         localStorage.removeItem('active')
+    }
+
+    static saveUsers(users: UserModel[]) {
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+
+    static updateActiveUser(payload: {
+        fullName: string;
+        phone: string;
+        street: string;
+        favoriteToys: string;
+        password: string;
+    }) {
+        const activeUser = this.getActiveUser();
+
+        const users = this.getUsers();
+
+        const userIndex = users.findIndex(
+            user => user.email === activeUser.email
+        );
+
+        if (userIndex === -1) {
+            throw new Error("USER_NOT_FOUND");
+        }
+
+        users[userIndex] = {
+            ...users[userIndex],
+            fullName: payload.fullName,
+            phone: payload.phone,
+            street: payload.street,
+            favoriteToys: payload.favoriteToys,
+            password: payload.password
+        };
+
+        this.saveUsers(users);
+        return users[userIndex];
     }
 }

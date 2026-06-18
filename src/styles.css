@@ -126,6 +126,10 @@ form .input-fields-wrapper {
     text-decoration: none;
 }
 
+.top-margin-12px {
+    margin-top: 12px;
+}
+
 .top-margin-16 {
     margin-top: 16px;
 }
@@ -169,6 +173,16 @@ form .input-fields-wrapper {
     height: 54px;
     width: 54px;
     background-color: rgba(255, 221, 47, 0.2);
+    border: 0px;
+}
+
+.tertiary-button-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 54px;
+    background-color: #aa00034c;
     border: 0px;
 }
 

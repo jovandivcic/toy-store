@@ -147,7 +147,7 @@ export class Cart {
 
       alert("Thank you for your rating");
     } catch (error) {
-      alert("Only arrived toys can be rated");
+      alert("Only delivered toys can be rated");
     }
   }
 
